@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+
+    <div id="mensagem"> </div>
+
+    <h1>Entrada de dados com inpute e botão </h1>
+
+    <label for="nomeInput">Digite seu nome: </label>
+    <input type="text" id="nomeInput" placeholder="Digite seu nome...">
+    </br>
+    <label for="idadeInput">Digite sua idade: </label>
+    <input type="text" id="idadeInput" placeholder="Digite sua idade...">
+    </br>
+    <button onclick="exibir()">Enviar</button>
+
+    <div id="exibir"> </div>
+
+    <script>
+        // Java Script
+        
+        function exibir(){
+            nome = document.getElementById("nomeInput").value;
+            idade = document.getElementById("idadeInput").value;
+            document.getElementById("exibir").innerText = "Olá, " + nome + "! " + "Você tem " + idade + "anos.";
+        }
+
+    </script>
+</body>
+</html>

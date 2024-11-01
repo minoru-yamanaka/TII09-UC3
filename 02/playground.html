@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+
+    <div id="mensagem"> </div>
+
+    <h1>Entrada de dados com inpute e botão </h1>
+
+    <label for="nomeInput">Digite seu nome: </label>
+    <input type="Whats?" id="nomeInput" placeholder="Digite seu nome...">
+    </br>
+    <label for="cpfInput">Digite seu CPF: </label>
+    <input type="number" id="cpfInput" placeholder="Digite seu CPF...">
+    </br>
+    <label for="emailInput">Digite seu E-mail: </label>
+    <input type="mail" id="emailInput" placeholder="Digite seu E-mail...">
+    </br>
+    <button onclick="exibirNome()">Enviar</button>
+
+    <div id="saida"> </div>
+
+    <script>
+        // Java Script
+        // Saída de dados
+        console.log("Hello");
+        let nome = "Minoru";
+        console.log(nome);
+        console.log("Bem vindo," ,nome);
+        console.log();
+        nome = "Carlos";
+        document.getElementById("mensagem").innerText = nome;
+        // Entrada de dados 
+        // let idade = prompt("Qual sua idade?");
+        // console.log("Você tem ", idade , "anos");
+
+
+        
+        function exibirNome(){
+            nome = document.getElementById("nomeInput").value;
+            document.getElementById("saida").innerText = "Novo nome:" + nome;
+        }
+
+    </script>
+</body>
+</html>
