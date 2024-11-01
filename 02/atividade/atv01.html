@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="corpo">
     <h1 id="saudacao"></h1>
 
-
     <script>
-        let name = prompt("Qual seu nome?");
-        let color = prompt("Qual sua cor favorita?")
-
-        name = document.getElementById("name").value;
-        document.getElementById().innerText = "Seu nome é: " , name;
+        let nome = prompt("Qual é o seu nome?");
+        let corFavorita = prompt("Qual é a sua cor favorita?");
 
         document.getElementById("saudacao").innerText = "Olá " + nome + "!";
-        document.getElementById("corpo").style.backgroundColor = color;
-        
-
+        document.getElementById("corpo").style.backgroundColor = corFavorita;
     </script>
 </body>
 </html>
