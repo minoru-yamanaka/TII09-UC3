@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Exercício Prático</h1>
+
+    <!-- <label for="numero">Informe seu número</label>
+    <input type="number" id="numero" placeholder="Insira seu número: ">
+    <button onclick="exibir()">Calcular</button> -->
+    
+    <div id="saida"></div>
+            
+    <script>
+        // Pedir o número
+        let numero = parseInt(prompt("Digite um numero para ver a tabauda das operações:"));
+
+        // Realizar operações e saída
+        console.log('MULTIPLICAÇÃO',numero*1,numero*2,numero*3,numero*4,numero*5,numero*6,numero*7,numero*8,numero*9,numero*10);
+        console.log('SUBITRAÇÃO',   numero-1,numero-2,numero-3,numero-4,numero-5,numero-6,numero-7,numero-8,numero-9,numero-10);
+        console.log('SOMA',         numero+1,numero+2,numero+3,numero+4,numero+5,numero+6,numero+7,numero+8,numero+9,numero+10);
+        console.log('DIVISÃO',      numero/1,numero/2,numero/3,numero/4,numero/5,numero/6,numero/7,numero/8,numero/9,numero/10);
+
+        console.log(`MULTIPLICAÇÃO`)
+        for (let n = 1; n <= 10; n++){
+            // console.log(`MULTIPLICAÇÃO`)
+            console.log(`${n} * ${numero} = ${n*numero}`);
+       }
+
+       console.log(`SUBTRAÇÃO`)
+        for (let n = 1; n <= 10; n++){
+            // console.log(`SUBTRAÇÃO`)
+            console.log(`${n} - ${numero} = ${n*numero}`);
+       }
+
+       console.log(`SOMA`)
+        for (let n = 1; n <= 10; n++){
+            // console.log(`SOMA`)
+            console.log(`${n} + ${numero} = ${n*numero}`);
+       }
+
+       console.log(`DIVISÃO`)
+        for (let n = 1; n <= 10; n++){
+            // console.log(`DIVISÃO`)
+            console.log(`${n} / ${numero} = ${n*numero}`);
+       }
+        
+
+
+       
+    </script>
+</body>
+</html>
