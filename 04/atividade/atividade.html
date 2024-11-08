@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+
+
+    <!-- Exercício Prático
+    Criar uma página onde:
+    O usuário insere a idade e sua altura usando prompt.
+    Use operadores comparativos e lógicos para verificar se:
+    A idade é maior ou igual a 18 e a altura é maior ou igual a 1.60.
+    Exiba no console.log se a pessoa pode ou não entrar em uma atração (ou “Passeio” ou “Montanha Russa”).
+    Use o operador ternário para atribuir uma mensagem de "Aprovado" ou "Reprovado" com base na condição. -->
+
+    <script>
+
+        // https://www.bing.com/search?pglt=43&q=como+trocar+oa%2C+por+.+pelo+js&cvid=9e25106d9c0448c3aba5183386ff0bef&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEAyCAgJEOkHGPxV0gEJMTU1OTlqMGoxqAIAsAIA&FORM=ANNAB1&PC=U531
+        
+
+        let idade = prompt("Insira sua idade: ");
+        let altura_entrada = prompt("Insira sua altura: ");
+
+        let altura = altura_entrada.replace("," , ".");
+        
+        let resultado = idade >= 18 && altura >= 1.6 ? "Aprovado" : "Reprovado";
+
+        alert(resultado);
+
+    </script>
+    
+</body>
+</html>

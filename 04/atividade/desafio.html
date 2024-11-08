@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Input</title>
+    <style>
+        .slider-container {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .slider {
+            width: 100%;
+        }
+        .value {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <input type="range" min="0" max="220" value="0" class="slider" id="mySlider">
+        <div class="value">Valor: <span id="sliderValue">0</span></div>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="saida">teste</div>
+    </div>
+
+    <script>
+        /*
+        Crie um script com um slider de input que vai de 0 a 220
+        para verificar a velocidade de um veículo.
+        Se o veículo estiver a mais de 80km/h, exiba a mensagem "Multado!"
+        */
+
+        const slider = document.getElementById('mySlider');
+        const sliderValue = document.getElementById('sliderValue');
+        const saida = document.getElementById('saida');
+
+        slider.addEventListener('input', function() {
+            sliderValue.textContent = slider.value;
+        });
+
+        function calcular() {
+            let velocidade = slider.value;
+            if (velocidade > 80) {
+                saida.innerText = "Multado!";
+            } else {
+                saida.innerText = "Dentro do limite.";
+            }
+        }
+    </script>
+</body>
+</html>
