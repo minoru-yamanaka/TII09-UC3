@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        main {
+            text-align: center;
+        }
+
+        #resultado {
+            background-color: aqua;
+            text-align: center;
+
+        }
+
+        li {
+            list-style-type: none ;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Gerador de Tabuada</h1>
+
+        <p>Insira um número para gerar a tabuada completa: </p>
+        <input type="number" id="numeroInput">
+        <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+        <div id='resultado'>    </div>
+
+    </main>
+    
+
+    <script>
+        // function gerarTabuada() {
+        //     // Obtém o valor do input
+        //     let numero = document.getElementById("numeroInput").value;
+
+        //     let resultadoDiv = document.getElementById('resultado');
+
+        //     resultadoDiv.innerText = InsereResultadoNaDiv();
+
+        //     function InsereResultadoNaDiv() {
+        //         let resultado = '';
+        //             for (var i = 1; i <= 10; i++) {
+        //                 resultado += `${numero} * ${i} = ${numero * i}\n`;
+        //             }
+        //         return resultado;       
+        //     }
+        // }
+
+        function gerarTabuada() {
+            // Obtem o valor do input
+            let numero = parseInt(document.getElementById("numeroInput").value);
+
+            // Insere o resultado na div
+            let resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = '';
+                
+            let list = "<ul>";
+            
+            list += "<li><strong>Tabuada de Adição</strong></li>";
+            for(let i = 1; i <= 10; i++) {                
+                list += `<li>${numero} + ${i} = ${numero + i}</li>`;
+            }
+
+            list += "<li><strong>Tabuada de Subtração</strong></li>";
+            for(let i = 1; i <= 10; i++) {                
+                list += `<li>${numero} - ${i} = ${numero - i}</li>`;
+            }
+
+            list += "<li><strong>Tabuada de Multiplicação</strong></li>";
+            for(let i = 1; i <= 10; i++) {                
+                list += `<li>${numero} * ${i} = ${numero * i}</li>`;
+            }
+
+            list += "<li><strong>Tabuada de Divisão</strong></li>";
+            for(let i = 1; i <= 10; i++) {                
+                list += `<li>${numero} / ${i} = ${numero / i}</li>`;
+            }
+            
+            resultadoDiv.innerHTML += list;
+        }
+
+
+
+
+    </script>
+</body>
+</html>
