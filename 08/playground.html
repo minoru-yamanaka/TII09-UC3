@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos</h1>
+
+    <!--Evento Inline-->
+    <button onclick="alert('AAAAAAAAAAAHHH')">Clique Aqui</button>
+
+    <!--Buscar Evento no JavaScript-->
+    <button id="meuBotao">Não Click!</button>
+
+    <!--Evento OnMouseOver-->
+    <p onmouseover="mudaOTexto(this)" id="paragrafo">Passe o mouse aqui</p>
+
+    <!--Buscar button e mudar fundo - onmouseover-->
+    <button onmouseover="mudaDeCor(this)" onmouseout="restauraCor(this)">Click e mude de cor</button>
+
+    </br>
+    
+    <!--Evento onkeydown-->
+    <input onkeydown="mostrarTecla()" type="text">
+
+
+    <script>
+        const btnClick = document.getElementById("meuBotao");      
+
+        btnClick.addEventListener("click", () => {
+            alert("BBBBBBBBBBBBBHH");
+        });
+
+        function mudaOTexto(elemento) {
+            elemento.innerText = `O mousse pasoou por aqui`;
+        }
+
+        function mudaDeCor(elemento) {
+            elemento.style.backgroundColor = 'yellow'; // Exemplo de cor
+            elemento.innerText = 'O mouse passou por aqui';
+        }
+
+        function restauraCor(elemento) {
+            elemento.style.backgroundColor = 'orange'; // Exemplo de cor
+            elemento.innerText = 'O mouse passou por aqui';
+        }
+
+        function mostrarTecla() {
+            console.log("Tecla digitada:", event.key)
+        }
+
+
+
+    </script>
+
+</body>
+</html>
