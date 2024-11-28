@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- 
+    Exercício 1: Alterar a cor de um botão
+    Objetivo: Mudar a cor do botão quando o mouse passar sobre ele.
+
+    Exercício 2: Mostrar a tecla pressionada
+    Objetivo: Exibir no console qual tecla foi pressionada.
+
+    Exercício 3: Contador de Cliques
+    Objetivo: Contar quantas vezes um botão foi clicado.
+
+    Exercício 4: Alterar texto ao clicar
+    Objetivo: Alterar o texto de um parágrafo ao clicar nele. 
+-->
+
+    <h1>Exercícios</h1>
+
+    <!-- Exercício 1: Alterar a cor de um botão --> 
+
+    <button id="btnClick">Botão</button>
+
+    <br><br>
+
+    <!-- Exercício 2: Mostrar a tecla pressionada -->
+
+   <!--Evento onkeydown-->    
+   <input onkeydown="mostrarTecla(event)" type="text">
+
+   <br><br>
+
+    <!-- Exercício 3: Contador de Cliques -->
+
+    <h1>Contador de Cliques</h1> <button id="btnCount">Contar Clicks</button> 
+    <br>
+    <div id="clickCount">Cliques: 0</div>
+
+    <br><br>
+    
+    <!-- Exercício 4: Alterar texto ao clicar -->
+    <p id="paragrafo">Passe o mouse aqui</p>
+
+
+
+
+    <script>
+
+    // Exercício 1: Alterar a cor de um botão
+    
+        btnClick.onmouseover = function() {
+            btnClick.style.background = `yellow`;
+        }
+
+    //Exercício 2: Mostrar a tecla pressionada 
+
+    function mostrarTecla(evento) {
+            console.log("Tecla digitada:", evento.key)
+        }
+
+    // Exercício 3: Contador de Cliques
+
+    let count = 0; // Inicializa o contador fora da função
+
+    document.getElementById('btnCount').onclick = function() { 
+    count++; // Incrementa o contador a cada clique
+    document.getElementById('clickCount').innerText = `Cliques: ${count}`; 
+    };
+
+    // Exercício 4: Alterar texto ao clicar
+    document.getElementById(`paragrafo`).onclick = function() {
+        this.innerText = 'O texto foi alterado!';
+    }
+    
+
+
+    </script>
+
+</body>
+</html>
