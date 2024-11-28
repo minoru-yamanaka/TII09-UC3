@@ -21,7 +21,7 @@
     <button onmouseover="mudaDeCor(this)" onmouseout="restauraCor(this)">Click e mude de cor</button>
 
     </br>
-    
+
     <!--Evento onkeydown-->
     <input onkeydown="mostrarTecla()" type="text">
 
@@ -33,19 +33,28 @@
             alert("BBBBBBBBBBBBBHH");
         });
 
+        btnClick.onmouseover = function()  {
+            btnClick.style.background = "yellow";
+        }
+
+        btnClick.onmouseout = function()  {
+            btnClick.style.background = " ";
+        }
+
+
         function mudaOTexto(elemento) {
             elemento.innerText = `O mousse pasoou por aqui`;
         }
 
-        function mudaDeCor(elemento) {
-            elemento.style.backgroundColor = 'yellow'; // Exemplo de cor
-            elemento.innerText = 'O mouse passou por aqui';
-        }
+        // function mudaDeCor(elemento) {
+        //     elemento.style.backgroundColor = 'yellow'; // Exemplo de cor
+        //     elemento.innerText = 'O mouse passou por aqui';
+        // }
 
-        function restauraCor(elemento) {
-            elemento.style.backgroundColor = 'orange'; // Exemplo de cor
-            elemento.innerText = 'O mouse passou por aqui';
-        }
+        // function restauraCor(elemento) {
+        //     elemento.style.backgroundColor = 'orange'; // Exemplo de cor
+        //     elemento.innerText = 'O mouse passou por aqui';
+        // }
 
         function mostrarTecla() {
             console.log("Tecla digitada:", event.key)
