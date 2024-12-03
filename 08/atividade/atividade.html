@@ -43,13 +43,22 @@
     <div id="clickCount">Cliques: 0</div>
 
     <br><br>
-    
-    <!-- Exercício 4: Alterar texto ao clicar -->
-    <p id="paragrafo">Passe o mouse aqui</p>
 
     <!-- Exercício 3: solução professor -->
     <input id="mostrarTecla02"  type="text">
     <p id="teclaPressionada"></p>
+    
+    <br><br>
+
+    <!-- Exercício 4: Alterar texto ao clicar -->
+    <p id="paragrafo">Passe o mouse aqui</p>
+
+    <br><br>
+
+    <!-- Exercício 4: solução professor -->
+    
+    <button id="botaoContador">Clique aqui</button>
+    <p id="exibirContagem">Cliques: 0</p>
 
     <script>
 
@@ -87,7 +96,13 @@
     }
     
     //  Exercício 4: solução professor
+    let contador = 0;
+    const botao = document.getElementById("botaoContador");
 
+    botao.onclick = function(){
+        contador++;
+        document.getElementById("exibirContagem").innerText = `Cliques: ` + contador;
+    }
 
     </script>
 
