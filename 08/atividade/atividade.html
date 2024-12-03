@@ -32,7 +32,7 @@
     <!-- Exercício 2: Mostrar a tecla pressionada -->
 
    <!--Evento onkeydown-->    
-   <input onkeydown="mostrarTecla(event)" type="text">
+   <input onkeydown="mostrarTecla(event)"  type="text">
 
    <br><br>
 
@@ -47,8 +47,9 @@
     <!-- Exercício 4: Alterar texto ao clicar -->
     <p id="paragrafo">Passe o mouse aqui</p>
 
-
-
+    <!-- Exercício 5: Alterar t -->
+    <input id="mostrarTecla02"  type="text">
+    <p id="teclaPressionada"></p>
 
     <script>
 
@@ -77,6 +78,14 @@
     document.getElementById(`paragrafo`).onclick = function() {
         this.innerText = 'O texto foi alterado!';
     }
+
+    // Exercício 02 11 24
+
+    document.getElementById("mostrarTecla02").onkeydown = function(evento) {
+        document.getElementById("teclaPressionada")
+            .innerText = "Tecla digitada:" + evento.key;
+    }
+    
     
 
 
@@ -84,3 +93,63 @@
 
 </body>
 </html>
+
+<!-- Professor ex01
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="botaoCor">Passe o mouse aqui!</button>
+
+    <button id="mudaPorNome" onmouseover="colocaCor()" onmouseout="removeCor()">Passe o mouse aqui também!</button>
+</head>
+<body>
+    <script>
+        const botao = document.getElementById("botaoCor");
+
+        botao.onmouseover = function() {
+            botao.style.background = "yellow";
+        }
+
+        botao.onmouseout = function() {
+            botao.style.background = "";
+        }
+
+        const botaoPorNome = document.getElementById("mudaPorNome");
+
+        function colocaCor() {
+            botaoPorNome.style.background = "green";
+        }
+
+        function removeCor() {
+            botaoPorNome.style.background = "";
+        }
+    </script>
+</body>
+</html>
+-->
+
+<!-- <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="mostrarTecla(event)">
+    <p id="teclaPressionada"></p>
+
+    <script>
+        function mostrarTecla(evento) {
+            document.getElementById("teclaPressionada")
+                .innerText = "Tecla: " + evento.key;
+        }
+    </script>
+</body>
+</html>
+</html> -->
