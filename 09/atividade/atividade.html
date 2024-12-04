@@ -21,12 +21,13 @@
         // Criando um novo elemento
         let novoItem = document.createElement("li");
         novoItem.innerText = "I";
-        novoItem.innerText =- "Item3";
+        novoItem.innerText = "Item3";
         lista.appendChild(novoItem);
 
-
-        
-
+        //Removendo um elemento
+        let primeiroItem = lista.firstElementChild;
+        primeiroItem.innerText = "Adeus Mundo";
+        lista.removeChild(primeiroItem)
     </script>
 
 </body>
