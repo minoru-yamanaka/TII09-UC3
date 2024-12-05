@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Manipulação básica do DOM
+
+        1. Crie uma página HTML simples com um título, um parágrafo e um botão.  
+        2. Ao clicar no botão:
+            - Altere o texto do parágrafo.
+            - Adicione um novo elemento ao final. 
+            - Remova o título.
+    -->
+
+    <h1 id="h1">Manipulação DOM</h1>
+
+    <p id="paragrafo">parágrafo</p>
+
+    <button id="botao">botão</button>
+
+    <script>
+
+        let paragrafo = document.getElementById("paragrafo");
+
+        let botao = document.getElementById("botao");
+        botao.onclick = function() {
+            paragrafo.innerHTML = "O texto foi alterado!";
+            let novoItem = document.createElement("p");
+            novoItem.innerText = "Adicionado"
+            paragrafo.append(novoItem)
+            h1.remove()
+        }
+
+    </script>
+</body>
+</html>
+
+<!--
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Um parágrafo</p>
+    <button id="botao">Um botão</button>
+
+    <script>
+        const botao = document.getElementById("botao");
+
+        botao.onclick = function() {
+            document.querySelector("p").innerText = "Mudei o texto";
+            
+            document.querySelector("title").remove();
+
+            const novoElemento = document.createElement("hr");
+            document.querySelector("body").append(novoElemento);
+        }
+    </script>
+</body>
+</html>
+-->
