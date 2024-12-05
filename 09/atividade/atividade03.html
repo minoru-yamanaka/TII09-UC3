@@ -3,66 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <h1 id="h1">Manipulação DOM</h1>
-
-    <input id="input" placeholder="digite">
-    <button id="botao">botão</button>
-    <input type="checkbox"></input>
-    <button id="apagar">apagar</button>
-    <p id="paragrafo">parágrafo</p>
-
-    
-
-    <script>
-        const botao = document.getElementById("botao");
-
-        const checkbox = document.getElementById("checkbox");
-
-        botao.onclick = function() {
-            let input = document.getElementById("input").value;
-            document.querySelector("p").innerHTML = input;          
-        }
-     
-        apagar.onclick = function() {
-            document.querySelector("p").remove();        
-        }
-
-        checkbox.onclick = function() {
-            document.querySelector("p").bold();        
-        }
-
-
-    </script>
-
-</body>
-</html>
-
-<!--
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manipulação DOM</title>
 </head>
 <body>
-    <p>Um parágrafo</p>
-    <button id="botao">Um botão</button>
+    <h1 id="h1">Manipulação DOM</h1>
+
+    <input id="input" placeholder="Digite algo">
+    <button id="botao">Inserir texto</button>
+    <input id="checkbox" type="checkbox"> Aplicar negrito
+    <button id="apagar">Apagar parágrafo</button>
+    <p id="paragrafo">Este é um parágrafo.</p>
 
     <script>
+        // Seleciona elementos
         const botao = document.getElementById("botao");
+        const checkbox = document.getElementById("checkbox");
+        const apagar = document.getElementById("apagar");
+        let paragrafo = document.getElementById("paragrafo");
 
-        botao.onclick = function() {
-            document.querySelector("p").innerText = "Mudei o texto";
-            
-            document.querySelector("title").remove();
+        //botão de inserir texto
+        botao.onclick = function () {
+            let input = document.getElementById("input").value;
+                paragrafo.innerHTML = input; // Atualiza o texto do parágrafo
+        };
 
-            const novoElemento = document.createElement("hr");
-            document.querySelector("body").append(novoElemento);
-        }
+        //botão de apagar o parágrafo
+        apagar.onclick = function () {
+                paragrafo.remove(); // Remove o parágrafo
+        };
+
+        //checkbox aplicar estilo em negrito
+        checkbox.onclick = function () {
+                if (checkbox.checked) {
+                    paragrafo.style.fontWeight = "bold"; // Aplica o negrito
+                } else {
+                    paragrafo.style.fontWeight = "normal"; // Remove o negrito
+            }
+        };
     </script>
 </body>
 </html>
--->
