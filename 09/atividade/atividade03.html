@@ -10,35 +10,48 @@
 
     <input id="input" placeholder="Digite algo">
     <button id="botao">Inserir texto</button>
-    <input id="checkbox" type="checkbox"> Aplicar negrito
+    <label>
+        <input id="checkbox" type="checkbox"> Aplicar negrito
+    </label>
     <button id="apagar">Apagar parágrafo</button>
-    <p id="paragrafo">Este é um parágrafo.</p>
+    <div id="content">
+        <p id="paragrafo">O item da lista será adicionado abaixo:</p>
+    </div>
 
     <script>
-        // Seleciona elementos
+        // Selecionando os elementos
         const botao = document.getElementById("botao");
-        const checkbox = document.getElementById("checkbox");
-        const apagar = document.getElementById("apagar");
-        let paragrafo = document.getElementById("paragrafo");
+        const content = document.getElementById("content");
 
-        //botão de inserir texto
+        // Função para inserir texto
         botao.onclick = function () {
-            let input = document.getElementById("input").value;
-                paragrafo.innerHTML = input; // Atualiza o texto do parágrafo
-        };
+            const input = document.getElementById("input").value;
+            if (input === "") return; // Não faz nada se o campo estiver vazio
 
-        //botão de apagar o parágrafo
-        apagar.onclick = function () {
-                paragrafo.remove(); // Remove o parágrafo
-        };
+            const novoParagrafo = document.createElement("p");
+            novoParagrafo.innerHTML = input;
+            content.appendChild(novoParagrafo); // Adiciona o novo parágrafo
 
-        //checkbox aplicar estilo em negrito
-        checkbox.onclick = function () {
+            // Criando o botão de apagar
+            const apagar = document.createElement("button");
+            apagar.innerHTML = "Apagar";
+            apagar.onclick = function() {
+                novoParagrafo.remove(); // Remove o parágrafo
+                apagar.remove(); // Remove o botão de apagar
+            };
+            content.appendChild(apagar);
+
+            // Criando o checkbox para aplicar estilo
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.onclick = function () {
                 if (checkbox.checked) {
-                    paragrafo.style.fontWeight = "bold"; // Aplica o negrito
+                    novoParagrafo.style.fontWeight = "bold"; // Aplica negrito
                 } else {
-                    paragrafo.style.fontWeight = "normal"; // Remove o negrito
-            }
+                    novoParagrafo.style.fontWeight = "normal"; // Remove o negrito
+                }
+            };
+            content.appendChild(checkbox);
         };
     </script>
 </body>
