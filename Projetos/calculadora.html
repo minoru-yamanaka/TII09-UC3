@@ -4,13 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
-            background-color: #ffffff;
+        body {
+            background-color: #000000;
             zoom: 80%;
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-    
+
+        .container {
+            width: 320px;
+            background-color: #000000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border: 4px solid #333333;
+            padding: 10px;
+        }
+
+        .panel {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: right;
+            padding: 20px;
+            font-size: 2em;
+
+            border: 4px solid #333333;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+            padding: 20px;
+            margin: 2px;
+            font-size: 1.5em;
+            border: 1px solid #333333;
+            background-color: #4d4d4d;
+            color: #ffffff;
+            cursor: pointer;       
+            border-radius: 50px; 
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
     </style>
-    <title>IOS Calculator</title>
+    <title>Calculator</title>
 </head>
 <body>
     <!-- https://github.com/ArthurSobreira/ios-calculator -->
@@ -18,42 +66,43 @@
     <div class="container">
         <div class="panel">
             <p class="result">0</p>
+        </div>
+
+        <table>
+            <tr>
+                <td><button>AC</button></td>
+                <td><button>+/-</button></td>
+                <td><button>%</button></td>
+                <td><button>/</button></td>
+            </tr>
+                
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button>x</button></td>
+            </tr>
+
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td><button>-</button></td>
+            </tr>
+
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td><button>+</button></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button>0</button></td>
+                <td><button>.</button></td>
+                <td><button>=</button></td>
+            </tr>
+        </table>
     </div>
-
-    <table>
-        <tr>
-            <td><button>AC</button></td>
-            <td><button>+/-</button></td>
-            <td><button>%</button></td>
-            <td><button>/</button></td>
-        </tr>
-            
-        <tr>
-            <td><button>7</button></td>
-            <td><button>8</button></td>
-            <td><button>9</button></td>
-            <td><button>x</button></td>
-        </tr>
-
-        <tr>
-            <td><button>4</button></td>
-            <td><button>5</button></td>
-            <td><button>6</button></td>
-            <td><button>-</button></td>
-        </tr>
-
-        <tr>
-            <td><button>1</button></td>
-            <td><button>2</button></td>
-            <td><button>3</button></td>
-            <td><button>+</button></td>
-        </tr>
-
-        <tr>
-            <td rowspan="2"><button>0</button></td>
-            <td><button>.</button></td>
-            <td><button>=</button></td>
-        </tr>
-    </table>
 </body>
 </html>
