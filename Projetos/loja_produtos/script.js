@@ -33,5 +33,5 @@ btnComprar.addEventListener("click", () => {
             precoTotal += parseFloat(card.dataset.preco);
         }
     });
-    resultado.innerText = precoTotal;
+    resultado.innerText = `Preço total R$ ${precoTotal}`;
 });
