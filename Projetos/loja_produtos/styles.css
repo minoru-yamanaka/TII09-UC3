@@ -14,9 +14,9 @@ body {
     cursor: pointer;
 }
 
-.card.selecionado{
+.card.selecionado {
     background-color: lightblue;
-    border: darkblue;
+    border-color: darkblue;
 }
 
 .container {
@@ -34,8 +34,8 @@ body {
     color: white;
 }
 
-.btn-comprar {
-    background: darkgreen;
+.btn-redefinir {
+    background: red;
     color: white;
 }
 
@@ -48,4 +48,10 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+
+.resultado {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
 }
