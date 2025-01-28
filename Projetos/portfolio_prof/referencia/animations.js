@@ -1,6 +1,8 @@
 const hero = document.querySelector("#hero");
 const heroPosition = hero.getBoundingClientRect();
 
+const about = document.querySelector('#about .about_content');
+
 // Função para gerenciar animações no Hero, Sobre, e Work
 function handleScrollAnimatinos() {
     if(heroPosition.top < window.innerHeight) {
